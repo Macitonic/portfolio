@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Mogaka | Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #030B13;
+            color: #FFFFFF;
+            font-family: "Source Sans 3", sans-serif;
+        }
+
+        header {
+            width: 100vw;
+            height: 120px;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px auto;
+        }
+
+        .logo {
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            list-style-type: none;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            padding: 10px auto;
+            font-size: 1.2rem;
+            transition: all 0.8s ease;
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            color: #d9a441;
+            padding: 10px auto;
+            font-size: 1.2rem;
+
+        }
+
+        nav .contact-btn {
+            background-color: rgb(134, 18, 18);
+            color: #FFFFFF;
+            width: 100px;
+            height: 22px;
+            margin-top: 3px;
+            padding: 10px auto;
+            font-weight: 500;
+            font-size: 1rem;
+            border: 3px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav .contact-btn:hover {
+            background-color: rgb(212, 13, 13);
+            color: #FFFFFF;
+            width: 100px;
+            height: 23px;
+            font-weight: 525;
+            font-size: 1.1rem;
+            border: 3px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-content {
+            margin: 0 50px 120px 0;
+            padding: 20px 30px;
+        }
+
+        .hero-content h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .hero-btn {
+            margin: 20px 0 10px;
+            padding: 10px 0 5px;
+            width: 230px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hero-btn1 {
+            background-color: rgb(49, 46, 46);
+            color: #FFFFFF;
+            width: 100px;
+            height: 30px;
+            font-weight: 500;
+            font-size: 0.8rem;
+            border: 3px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-btn1:hover {
+            background-color: rgb(121, 117, 117);
+            color: #FFFFFF;
+            width: 100px;
+            height: 31px;
+            font-weight: 700;
+            font-size: 0.84rem;
+            border: 3px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-btn2 {
+            background-color: rgb(134, 18, 18);
+            color: #FFFFFF;
+            width: 100px;
+            height: 30px;
+            font-weight: 500;
+            font-size: 0.8rem;
+            border: 3px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-btn2:hover {
+            background-color: rgb(212, 13, 13);
+            color: #FFFFFF;
+            width: 100px;
+            height: 31px;
+            font-weight: 700;
+            font-size: 0.84rem;
+            border: 3px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-image {
+            margin-left:180px ;
+            padding: 20px;
+            position: relative;
+            top: 0;
+            right: 0;
+            border: 1px solid transparent;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p>.brian</p>
+            </div>
+            <div class="nav_links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li>
+                        <button class="contact-btn">Contact</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Hey, I'm Brian</h2>
+            <h1>Software</h1>
+            <h1>Engineer</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Repellat commodi nobis eligendi excepturi
+            </p>
+            <div class="hero-btn">
+                <button class="hero-btn1">Get in Touch</button>
+                <button class="hero-btn2">Projects</button>
+            </div>
+
+        </div>
+        <div class="hero-image">
+            <img width="400px" height="350px"
+                src="https://i.pinimg.com/1200x/e4/82/1d/e4821dcdde4794e00e8d2ffb7908ac84.jpg" alt="Brian's Image">
+        </div>
+        <p></p>
+    </section>
+</body>
+
+</html>
