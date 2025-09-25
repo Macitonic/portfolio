@@ -1,546 +1,728 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brian Mogaka | Software Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-      }
 
-      body {
-        background: #030b13;
-        color: #ffffff;
-        font-family: "Source Sans 3", sans-serif;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Mogaka | Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-      /*Navbar Section*/
-      header {
-        width: 100vw;
-        height: 60px;
-        background: rgba(3, 11, 19, 0.95);
-        backdrop-filter: blur(10px);
-        position: fixed;
-        z-index: 1000;
-        border-bottom: 1px solid rgb(54, 53, 52);
-      }
+    body {
+      background: #030b13;
+      color: #ffffff;
+      font-family: "Source Sans 3", sans-serif;
+    }
 
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 auto;
-      }
+    /*Navbar Section*/
+    header {
+      width: 100vw;
+      height: 60px;
+      background: rgba(3, 11, 19, 0.95);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      z-index: 1000;
+      border-bottom: 1px solid rgb(54, 53, 52);
+    }
 
-      .logo img {
-        width: 115px;
-        height: auto;
-        object-fit: contain;
-      }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 auto;
+    }
 
-      nav ul {
-        display: flex;
-        gap: 25px;
-        margin-right: 30px;
-      }
+    .logo img {
+      width: 115px;
+      height: auto;
+      object-fit: contain;
+    }
 
-      nav ul li {
-        list-style-type: none;
-      }
+    nav ul {
+      display: flex;
+      gap: 25px;
+      margin-right: 30px;
+    }
 
-      nav ul li a {
-        text-decoration: none;
-        color: #ffffff;
-        padding: 10px auto;
-        font-size: 1.2rem;
-        transition: all 0.8s ease;
-      }
+    nav ul li {
+      list-style-type: none;
+    }
 
-      nav ul li a:hover {
-        text-decoration: none;
-        color: #d9a441;
-        padding: 10px auto;
-        font-size: 1.2rem;
-      }
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 10px auto;
+      font-size: 1.2rem;
+      transition: all 0.8s ease;
+    }
 
-      nav .contact-btn {
-        background-color: rgb(134, 18, 18);
-        color: #ffffff;
-        width: 100px;
-        height: 35px;
-        margin-bottom: 10px;
-        padding: 10px auto;
-        font-weight: 500;
-        font-size: 1rem;
-        border: 3px solid transparent;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
+    nav ul li a:hover {
+      text-decoration: none;
+      color: #d9a441;
+      padding: 10px auto;
+      font-size: 1.2rem;
+    }
 
-      nav .contact-btn:hover {
-        background-color: rgb(212, 13, 13);
-        color: #ffffff;
-        width: 100px;
-        height: 35.5px;
-        font-weight: 525;
-        font-size: 1.1rem;
-        border: 3px solid transparent;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
+    nav .contact-btn {
+      background-color: rgb(134, 18, 18);
+      color: #ffffff;
+      width: 100px;
+      height: 35px;
+      margin-bottom: 10px;
+      padding: 10px auto;
+      font-weight: 500;
+      font-size: 1rem;
+      border: 3px solid transparent;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
 
-      /*Hero Section*/
-      .hero {
-        padding: 6.5rem 1% 5rem;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-      }
+    nav .contact-btn:hover {
+      background-color: rgb(212, 13, 13);
+      color: #ffffff;
+      width: 100px;
+      height: 35.5px;
+      font-weight: 525;
+      font-size: 1.1rem;
+      border: 3px solid transparent;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
 
-      .hero-content {
-        padding: 20px 30px;
-      }
+    /*Hero Section*/
+    .hero {
+      padding: 6.5rem 1% 5rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
 
-      .hero-content h2 {
-        font-size: 2rem;
-        font-weight: 400;
-      }
+    .hero-content {
+      padding: 20px 30px;
+    }
 
-      .hero-content h1 {
-        font-size: 5rem;
-        font-weight: 700;
-      }
+    .hero-content h2 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
 
-      .hero-content p {
-        font-size: 1.2rem;
-        font-weight: 300;
-      }
+    .hero-content h1 {
+      font-size: 5rem;
+      font-weight: 700;
+    }
 
-      .hero-btn {
-        margin: 10px 0 10px;
-        padding: 10px 0 5px;
-        width: 230px;
-        display: flex;
-        justify-content: space-between;
-      }
+    .hero-content p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
 
-      .hero-btn1 {
-        background-color: rgb(49, 46, 46);
-        color: #ffffff;
-        width: 100px;
-        height: 30px;
-        font-weight: 500;
-        font-size: 0.8rem;
-        border: 3px solid transparent;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
+    .hero-btn {
+      margin: 10px 0 10px;
+      padding: 10px 0 5px;
+      width: 230px;
+      display: flex;
+      justify-content: space-between;
+    }
 
-      .hero-btn1:hover {
-        background-color: rgb(121, 117, 117);
-        color: #ffffff;
-        width: 100px;
-        height: 31px;
-        font-weight: 700;
-        font-size: 0.84rem;
-        border: 3px solid transparent;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
+    .hero-btn1 {
+      background-color: rgb(49, 46, 46);
+      color: #ffffff;
+      width: 100px;
+      height: 30px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      border: 3px solid transparent;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
 
-      .hero-btn2 {
-        background-color: rgb(134, 18, 18);
-        color: #ffffff;
-        width: 100px;
-        height: 30px;
-        font-weight: 500;
-        font-size: 0.8rem;
-        border: 3px solid transparent;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
+    .hero-btn1:hover {
+      background-color: rgb(121, 117, 117);
+      color: #ffffff;
+      width: 100px;
+      height: 31px;
+      font-weight: 700;
+      font-size: 0.84rem;
+      border: 3px solid transparent;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
 
-      .hero-btn2:hover {
-        background-color: rgb(212, 13, 13);
-        color: #ffffff;
-        width: 100px;
-        height: 31px;
-        font-weight: 700;
-        font-size: 0.84rem;
-        border: 3px solid transparent;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
+    .hero-btn2 {
+      background-color: rgb(134, 18, 18);
+      color: #ffffff;
+      width: 100px;
+      height: 30px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      border: 3px solid transparent;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
 
-      .hero-image {
-        margin: 0;
-        padding: 0 20px;
-        position: relative;
-        top: 0;
-        right: 0;
-        border: 1px solid transparent;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-      }
+    .hero-btn2:hover {
+      background-color: rgb(212, 13, 13);
+      color: #ffffff;
+      width: 100px;
+      height: 31px;
+      font-weight: 700;
+      font-size: 0.84rem;
+      border: 3px solid transparent;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
 
-      .hero img {
-        border-radius: 50%;
-      }
+    .hero-image {
+      margin: 0;
+      padding: 0 20px;
+      position: relative;
+      top: 0;
+      right: 0;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
 
-      /* About Me Section*/
-      .about-me {
-        display: flex;
-        justify-content: space-between;
-        padding: 3.5rem 1% 5rem;
-        margin: 3%;
-        position: relative;
-        top: 0;
-        left: 0;
-        border-radius: 10px;
-        background: rgba(17, 24, 39, 0.4);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-      }
+    .hero img {
+      border-radius: 50%;
+    }
 
-      .about-me-content {
-        max-width: 440px;
-        margin-left: 20px;
-      }
+    /* About Me Section*/
+    .about-me {
+      display: flex;
+      justify-content: space-between;
+      padding: 3.5rem 1% 5rem;
+      margin: 3%;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      border-radius: 10px;
+      box-shadow: 0 8px 42px rgba(0, 0, 0, 0.4);
+    }
+
+    .about-me-content {
+      max-width: 440px;
+      margin-left: 20px;
+    }
 
 
-      .about-me-content h2{
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
+    .about-me-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-      .about-me-content button {
-        background-color: rgb(94, 148, 12);
-        border: 1px solid transparent;
-        color: rgb(27, 26, 26);
-        margin-top: 30px;
-        height: 35px;
-        border-radius: 3px;
-        padding: 20px auto;
-        font-weight: 560;
-        font-size: 0.9rem;
-      }
+    .about-me-content button {
+      background-color: rgb(94, 148, 12);
+      border: 1px solid transparent;
+      color: rgb(27, 26, 26);
+      margin-top: 30px;
+      height: 35px;
+      border-radius: 3px;
+      padding: 20px auto;
+      font-weight: 560;
+      font-size: 0.9rem;
+    }
 
-      .about-me-content button:hover {
-        background-color: rgb(139, 218, 22);
-        border: 1px solid transparent;
-        color: rgb(46, 45, 45);
-        margin-top: 30px;
-        height: 35px;
-        border-radius: 3px;
-        padding: 21px auto;
-        font-weight: 560;
-        font-size: 0.91rem;
-      }
-      .about-me-section2 {
-        display: inline-flex;
-        padding-bottom: 10px;
-        text-align: center;
-        margin-right: 110px;
-      }
+    .about-me-content button:hover {
+      background-color: rgb(139, 218, 22);
+      border: 1px solid transparent;
+      color: rgb(46, 45, 45);
+      margin-top: 30px;
+      height: 35px;
+      border-radius: 3px;
+      padding: 21px auto;
+      font-weight: 560;
+      font-size: 0.91rem;
+    }
 
-      .side-lines {
-        display: flex;
-        flex-direction: column;
-      }
+    .about-me-section2 {
+      display: inline-flex;
+      padding-bottom: 10px;
+      text-align: center;
+      margin-right: 110px;
+    }
 
-      .line {
-        width: 2px;
-        height: 120px;
-        background-color: white;
-        margin: 0 auto;
-      }
+    .side-lines {
+      display: flex;
+      flex-direction: column;
+    }
 
-      .btn {
-        margin: 10px auto;
-        width: 8px;
-        height: 8px;
-        background-color: white;
-        border-radius: 50%;
-      }
+    .line {
+      width: 2px;
+      height: 120px;
+      background-color: white;
+      margin: 0 auto;
+    }
 
-      .icons {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0 5px 0 10px;
-      }
+    .btn {
+      margin: 10px auto;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      border-radius: 50%;
+    }
 
-      .dev-process {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-left: 10px;
-        padding: 15px 5px;
-        text-align: left;
-      }
+    .icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 5px 0 10px;
+    }
 
-      .statistics-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 20px auto;
-      }
+    .dev-process {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-left: 10px;
+      padding: 15px 5px;
+      text-align: left;
+    }
 
-      .statistics {
-        display: flex;
-        flex-direction: row;
-        gap: 150px;
-      }
-      .statistics-report {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-      }
+    .statistics-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+    }
 
-      /*Projects Section*/
-      .projects {
-        padding: 3.5rem 1% 5rem;
-        margin: 3%;
-      }
+    .statistics {
+      display: flex;
+      flex-direction: row;
+      gap: 150px;
+    }
 
-      .projects h2{
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: 700;
-      }
+    .statistics-report {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
 
-      .project-image1 {
-        margin-right: 120px;
-        border-radius: 10px;
-        background: rgba(17, 24, 39, 0.4);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      }
+    /*Projects Section*/
+    .projects {
+      padding: 2.5rem 1% 5rem;
+      margin: 3%;
+    }
 
-      .card-left {
-        display: flex;
-        justify-content: space-between;
-        margin: 100px 0;
-      }
+    .projects h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
 
-      .card-left p {
-        max-width: 400px;
-        margin: 60px 0 0 100px;
-        text-align: left;
-      }
+    .project-image1 {
+      border-radius: 10px;
+    }
 
-      .card-right {
-        display: flex;
-        justify-content: space-between;
-        margin: 100px 0;
-        
-      }
+    .project-image1 img {
+      background: rgba(17, 24, 39, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
 
-      .card-right p {
-        max-width: 400px;
-        margin: 60px 100px 0 0;
-        text-align: left;
-      }
+    .card-left {
+      display: flex;
+      justify-content: space-between;
+      margin: 100px 0;
+    }
 
-      .project-image2 {
-        margin-left: 120px;
-        border-radius: 10px;
-        background: rgba(17, 24, 39, 0.4);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        box-shadow: 8px 0 32px rgba(0, 0, 0, 0.4);
-      }
-    </style>
-  </head>
+    .card-left p {
+      max-width: 400px;
+      margin: 60px 0 0 100px;
+      text-align: left;
+    }
 
-  <body>
-    <!--Navbar Section-->
-    <header>
-      <nav>
-        <div class="logo">
-          <img src="assets/brian-logo.png" alt="brian's logo" />
+    .card-right {
+      display: flex;
+      justify-content: space-between;
+      margin: 100px 0;
+
+    }
+
+    .card-right p {
+      max-width: 400px;
+      margin: 60px 100px 0 0;
+      text-align: left;
+    }
+
+    .project-image2 {
+      border-radius: 10px;
+    }
+
+    .project-image2 img {
+      background: rgba(17, 24, 39, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 8px 0 32px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Contact Section */
+    .contact-section{
+      padding:0 1% 0;
+      margin: 0 3% 0;
+    }
+    .contact-section1 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .reach-out {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .reach-out h2 {
+      font-size: 3rem;
+      letter-spacing: 1.2px;
+    }
+
+    .left-section p {
+      max-width: 325px;
+      margin-bottom: 30px;
+      line-height: 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+
+    .left-section ul {
+      margin-bottom: 35px;
+      list-style-type: none;
+    }
+
+    .left-section ul li {
+      font-weight: 100;
+      font-size: 0.8rem;
+    }
+
+    .social-media-handles {
+      display: inline-flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 45px;
+    }
+
+    /*form*/
+
+    .form{
+      padding: 4.5% 3% 0;
+      margin: 0 40px 40px 0;
+      background: rgba(17, 24, 39, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 8px 0 32px rgba(0, 0, 0, 0.4);
+      
+    }
+
+    .btn1 {
+      display: flex;
+      justify-content: space-evenly;
+      margin-left: 10px;
+      margin-bottom: 25px;
+    }
+
+    .btn1 input {
+      color: #ffffff;
+      padding: 20px auto;
+      width: 200px;
+      height: 30px;
+      margin-right: 20px;
+      background-color: rgba(17, 24, 39, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 8px 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn1 input::placeholder{
+      text-indent: 10px;
+    }
+
+    .btn1 input[type="text"] {
+        text-indent: 10px;
+    }
+    .btn2{
+      display: flex;
+      flex-direction: column;
+      align-items: center ;
+    }
+
+    .btn2 input::placeholder{
+      text-indent: 10px;
+    }
+
+    .btn2 input{
+      color: #ffffff;
+      padding: 20px auto;
+      width: 420px;
+      height: 200px;
+      margin-bottom: 10px;
+      background-color: rgba(17, 24, 39, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 8px 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn2 button{
+      color: #000;
+      padding: 20px auto;
+      width: 425px;
+      height: 45px;
+      margin-bottom: 35px;
+      background-color: rgba(255, 255, 255, 0.945);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 8px 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-section2 {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 35px;
+    }
+
+    .contact-section2 button {
+      color: #ffffff;
+      padding: 20px auto;
+      width: 200px;
+      height: 40px;
+      background-color: rgba(17, 24, 39, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 8px 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+
+    .footer {
+      background-color: rgb(1, 8, 26);
+      border-radius: rgb(87, 84, 84);
+    }
+
+    .footer p {
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 200;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Navbar Section-->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="assets/brian-logo.png" alt="brian's logo" />
+      </div>
+      <div class="nav_links">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li>
+            <button class="contact-btn">Contact</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--Hero Section-->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Hey, I'm Brian</h2>
+      <h1>A Software</h1>
+      <h1>Engineer</h1>
+      <p>
+        I specialize in creating seamless <br />
+        user experiences with full-stack solutions. <br />Helping businesses
+        grow by turning <br />
+        complex ideas into working technology.
+      </p>
+      <div class="hero-btn">
+        <button class="hero-btn1">Get in Touch</button>
+        <button class="hero-btn2">Projects</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img width="450px" height="450px" src="https://i.pinimg.com/736x/16/35/2b/16352b1b70d94f7da4aca0764a6c099a.jpg"
+        alt="Brian's Image" />
+    </div>
+  </section>
+  <!--About Me-->
+  <section class="about-me" id="about">
+    <div class="about-me-content">
+      <h2>About me</h2>
+      <p>
+        I discovered coding by solving real problems, and that curiosity
+        became my passion. From self-learning to formal training, I’ve built
+        skills in designing and developing websites. Over time, I’ve worked on
+        projects that taught me the importance of clean design, responsive
+        layouts, and creating solutions that are easy for people to use. My
+        journey has been shaped by constant learning, adapting to new
+        technologies, and finding ways to turn complex challenges into simple,
+        practical results. I believe every project is more than just code,
+        it’s about understanding people’s needs, bringing ideas to life, and
+        delivering work that makes a difference. Today, I focus on creating
+        digital solutions that help businesses stand out and grow.
+      </p>
+      <button>Let's Build Something Together...</button>
+    </div>
+    <div class="about-me-section2">
+      <div class="side-lines">
+        <div class="line"></div>
+        <div class="btn"></div>
+        <div class="line"></div>
+        <div class="btn"></div>
+        <div class="line"></div>
+      </div>
+      <div class="icons">
+        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/laptop-coding.png"
+          alt="laptop-coding" />
+        <img width="50" height="50"
+          src="https://img.icons8.com/external-photo3ideastudio-lineal-photo3ideastudio/64/FFFFFF/external-app-development-online-business-photo3ideastudio-lineal-photo3ideastudio.png"
+          alt="external-app-development-online-business-photo3ideastudio-lineal-photo3ideastudio" />
+        <img width="50" height="50"
+          src="https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/64/FFFFFF/external-web-hosting-web-hosting-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png"
+          alt="external-web-hosting-web-hosting-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto" />
+      </div>
+      <div class="dev-process">
+        <p>Website Development</p>
+        <p>App Development</p>
+        <p>Web Hosting</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="statistics-section">
+      <div class="statistics">
+        <h3>20+</h3>
+        <h3>95%</h3>
+        <h3>2+</h3>
+      </div>
+      <div id="?about" class="statistics-report">
+        <p>Completed Projects</p>
+        <p>Client Satisfaction</p>
+        <p>Years of experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!--Projects Section-->
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="card-left">
+      <div class="project-image1">
+        <img src="https://i.pinimg.com/1200x/bf/d8/9e/bfd89ebf40141163f30ffefcdde45aeb.jpg" alt="my projects"
+          width="450px" height="250px" />
+      </div>
+      <div class="project-image2">
+        <img src="https://i.pinimg.com/736x/2c/19/8a/2c198ae7548077a7a372107470b00bd5.jpg" alt="my-projects"
+          width="450px" height="250px" />
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="project-image1">
+        <img src="https://i.pinimg.com/736x/e0/ff/c5/e0ffc588a25df6fa93acd1680a0113d9.jpg" alt="my projects"
+          width="450px" height="250px" />
+      </div>
+      <div class="project-image2">
+        <img src="https://i.pinimg.com/736x/bf/58/27/bf58277f1fae961e329f5cd366edaec5.jpg" alt="my-projects"
+          width="450px" height="250px" />
+      </div>
+    </div>
+    <div class="card-left">
+      <div class="project-image1">
+        <img src="https://i.pinimg.com/736x/c4/27/9c/c4279cd81964268e7097a40db848f5ee.jpg" alt="my-projects"
+          width="450px" height="250px" />
+      </div>
+      <div class="project-image2">
+        <img src="https://i.pinimg.com/1200x/c9/8f/d7/c98fd754b643148cdd249734fce4f0dd.jpg" alt="my-projects"
+          width="450px" height="250px" />
+      </div>
+    </div>
+  </section>
+
+  <!--Contact Section-->
+  <section class="contact-section" id="contact">
+    <div class="contact-section1">
+      <div class="left-section">
+        <div class="reach-out">
+          <h2>Reach Out</h2>
+          <img width="40" height="40" src="https://img.icons8.com/glyph-neue/64/FFFFFF/arrow--v1.png" alt="arrow--v1" />
         </div>
-        <div class="nav_links">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li>
-              <button class="contact-btn">Contact</button>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <!--Hero Section-->
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <h2>Hey, I'm Brian</h2>
-        <h1>A Software</h1>
-        <h1>Engineer</h1>
-        <p>
-          I specialize in creating seamless <br />
-          user experiences with full-stack solutions. <br />Helping businesses
-          grow by turning <br />
-          complex ideas into working technology.
-        </p>
-        <div class="hero-btn">
-          <button class="hero-btn1">Get in Touch</button>
-          <button class="hero-btn2">Projects</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores incidunt repellendus
+          repudiandae ratione esse rem error animi a quisquam totam, suscipit ab, nam at officia, rerum tempore
+          blanditiis
+          repellat!</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Lorem ipsum dolor sit</li>
+          <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+        <div class="social-media-handles">
+          <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/EBEBEB/twitterx--v1.png"
+            alt="twitterx--v1" />
+          <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/228BE6/facebook-new.png"
+            alt="facebook-new" />
+          <img width="30" height="30" src="https://img.icons8.com/3d-fluency/94/instagram-logo.png"
+            alt="instagram-logo" />
         </div>
       </div>
-      <div class="hero-image">
-        <img
-          width="450px"
-          height="450px"
-          src="https://i.pinimg.com/736x/16/35/2b/16352b1b70d94f7da4aca0764a6c099a.jpg"
-          alt="Brian's Image"
-        />
-      </div>
-    </section>
-    <!--About Me-->
-    <section class="about-me" id="about">
-      <div class="about-me-content">
-        <h2>About me</h2>
-        <p>
-          I discovered coding by solving real problems, and that curiosity
-          became my passion. From self-learning to formal training, I’ve built
-          skills in designing and developing websites. Over time, I’ve worked on
-          projects that taught me the importance of clean design, responsive
-          layouts, and creating solutions that are easy for people to use. My
-          journey has been shaped by constant learning, adapting to new
-          technologies, and finding ways to turn complex challenges into simple,
-          practical results. I believe every project is more than just code,
-          it’s about understanding people’s needs, bringing ideas to life, and
-          delivering work that makes a difference. Today, I focus on creating
-          digital solutions that help businesses stand out and grow.
-        </p>
-        <button>Let's Build Something Together...</button>
-      </div>
-      <div class="about-me-section2">
-        <div class="side-lines">
-          <div class="line"></div>
-          <div class="btn"></div>
-          <div class="line"></div>
-          <div class="btn"></div>
-          <div class="line"></div>
-        </div>
-        <div class="icons">
-          <img
-            width="50"
-            height="50"
-            src="https://img.icons8.com/ios-filled/50/FFFFFF/laptop-coding.png"
-            alt="laptop-coding"
-          />
-          <img
-            width="50"
-            height="50"
-            src="https://img.icons8.com/external-photo3ideastudio-lineal-photo3ideastudio/64/FFFFFF/external-app-development-online-business-photo3ideastudio-lineal-photo3ideastudio.png"
-            alt="external-app-development-online-business-photo3ideastudio-lineal-photo3ideastudio"
-          />
-          <img
-            width="50"
-            height="50"
-            src="https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/64/FFFFFF/external-web-hosting-web-hosting-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png"
-            alt="external-web-hosting-web-hosting-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto"
-          />
-        </div>
-        <div class="dev-process">
-          <p>Website Development</p>
-          <p>App Development</p>
-          <p>Web Hosting</p>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="statistics-section">
-        <div class="statistics">
-          <h3>20+</h3>
-          <h3>95%</h3>
-          <h3>2+</h3>
-        </div>
-        <div id="?about" class="statistics-report">
-          <p>Completed Projects</p>
-          <p>Client Satisfaction</p>
-          <p>Years of experience</p>
-        </div>
-      </div>
-    </section>
+      <div class="right-section">
+        <form action="" method="POST" class="form">
+          <div class="btn1">
+            <input type="text" name="name" id="name" placeholder="Name" class="name">
+            <input type="email" name="email" id="email" placeholder="Email" class="Email">
+          </div>
+          <div class="btn2">
+            <input type="text" name="message" id="message" placeholder="Message">
+            <button type="submit">Submit</button>
+          </div>
 
-    <!--Projects Section-->
-    <section class="projects" id="projects">
-      <h2>My Projects</h2>
-      <div class="card-left">
-        <div class="project-image1">
-          <img
-            src="https://i.pinimg.com/1200x/bf/d8/9e/bfd89ebf40141163f30ffefcdde45aeb.jpg"
-            alt="my projects"
-            width="450px"
-            height="250px"
-          />
-        </div>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores quis
-          quos, aliquid culpa quisquam placeat nesciunt nobis, praesentium
-          dolore earum provident veniam soluta itaque id, ex corrupti optio
-          mollitia fugit
-        </p>
+        </form>
       </div>
-      <div class="card-right">
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea optio
-          aliquam cupiditate dolor veritatis, voluptatum obcaecati minima
-          adipisci, vel reprehenderit natus rem nisi, maxime id animi quidem
-          ipsa corrupti consectetur!
-        </p>
-        <div class="project-image2">
-          <img
-            src="https://i.pinimg.com/736x/2c/19/8a/2c198ae7548077a7a372107470b00bd5.jpg"
-            alt="my-projects"
-            width="450px"
-            height="250px"
-          />
-        </div>
-      </div>
-      <div class="card-left">
-        <div class="project-image1">
-          <img
-            src="https://i.pinimg.com/736x/76/55/87/765587e389328e851fb9b1a5528fec76.jpg"
-            alt="my-projects"
-            width="450px"
-            height="250px"
-          />
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aut,
-          autem quaerat quasi ipsam adipisci voluptatem eaque voluptas
-          reprehenderit, deleniti inventore molestias quod beatae assumenda.
-          Veniam itaque culpa deleniti unde.
-        </p>
-      </div>
-    </section>
-  </body>
+    </div>
+    <div class="contact-section2">
+      <button>Email us: <br> theeviralpulse@gmail.com</button>
+      <button>Call us: <br> +254 745407137</button>
+      <button>Our Location</button>
+    </div>
+    <div class="footer">
+      <p>&copy;2025 .brian. All rights reserved.</p>
+    </div>
+  </section>
+</body>
+
 </html>
