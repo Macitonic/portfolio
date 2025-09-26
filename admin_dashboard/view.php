@@ -10,7 +10,7 @@ if($results->num_rows>0){
         <tr><th>ID</th><th>Name</th><th>Email</th><th>Message</th></tr>";
     while($row = $results-> fetch_assoc()) {
         echo"<tr>
-        <td>".$row['id']."</td>
+        <td>".$row['ID']."</td>
         <td>".$row['name']."</td>
         <td>".$row['email']."</td>
         <td>".$row['message']."</td>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        body {
+            background: url("https://i.pinimg.com/1200x/33/01/a5/3301a53e04f42fba73e081fa6777aa63.jpg") no-repeat center/cover;
+            width: 90vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            align-items: center;
+            width: 300px;
+            margin: 6rem auto;
+            padding: 10px auto;
+            background: rgba(175, 179, 190, 0.4);
+            backdrop-filter: blur(50px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: -8px 0 32px rgba(0, 0, 0, 0.4);
+            
+
+        }
+
+
+
+        .input {
+            height: 23px;
+            border-radius: 5px;
+            padding: 5px;
+            width: 250px;
+            margin-bottom: 30px;
+            border: 1px solid transparent;
+        }
+
+        button {
+            background-color: #397FFA;
+            width: 270px;
+            height: 40px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            margin: 0 auto 8px;
+            font-weight: 600;
+        }
+        h2{
+            margin-bottom: 1px;
+            text-align: center;
+        }
+        p{
+            font-size: 0.9rem;
+        }
+
+        a{
+            color: #1d0bc5;
+            text-align: center;
+            margin-left: 41px;
+            font-size: 0.9rem;
+        }
+
+        img{
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="" alt="">
+    </div>
+    <form method="POST" class="form">
+        <h2>Welcome back,</h2>
+        <img src="brian-logo.png" alt="logo" width="100px">
+        <input type="email" name="email" id="email" placeholder="Email" required class="input">
+        <input type="text" name="username" placeholder="username" required class="input">
+        <input type="password" name="password" placeholder="password" required class="input">
+        <button type="submit">Log in</button>
+        <p>Don’t have an account, <br><a href="registration.php">create one</a></p>
+        
+    </form>
+</body>
+
+</html>
