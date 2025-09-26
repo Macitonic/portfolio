@@ -30,9 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<div>
-    <img src="" alt="">
-</div>
 <form method="POST" class="form">
     <h2>Welcome back,</h2>
     <img src="brian-logo.png" alt="logo" width="110px">

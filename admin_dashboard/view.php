@@ -1,27 +1,20 @@
 <?php
 include 'config.php';
 
-$sql="SELECT * FROM info";
-$results=$conn->query($sql);
+$sql = "SELECT * FROM info";
+$results = $conn->query($sql);
 
-if($results->num_rows>0){
-    echo "<h2>Clients List</h2>";
-    echo "<table border='1'>
-        <tr><th>ID</th><th>Name</th><th>Email</th><th>Message</th></tr>";
-    while($row = $results-> fetch_assoc()) {
-        echo"<tr>
-        <td>".$row['ID']."</td>
-        <td>".$row['name']."</td>
-        <td>".$row['email']."</td>
-        <td>".$row['message']."</td>
-        </tr>";
+if ($results->num_rows > 0) {
+    while ($row = $results->fetch_assoc()) {
+        echo "<tr>
+                <td>".$row['ID']."</td>
+                <td>".$row['name']."</td>
+                <td>".$row['email']."</td>
+                <td>".$row['message']."</td>
+              </tr>";
     }
-    echo"</table>";
-}
-else{
-    echo"No clients messaged you!";
+} else {
+    echo "<tr><td colspan='4' style='text-align:center;'>No clients messaged you!</td></tr>";
 }
 
 $conn->close();
-
-?>
