@@ -833,11 +833,13 @@
       @media (max-width: 480px) {
         .logo img {
           width: 100px;
+          overflow: hidden;
         }
 
         body {
           padding: 0;
-          margin: 0;
+          margin: 0 auto;
+          width: 100%;
         }
         .hero {
           padding: 4.5rem 0 5rem;
@@ -856,10 +858,11 @@
         }
 
         .hero img {
-          width: 380px;
+          width: 100%;
           height: 300px;
           border-radius: 20px;
           margin-bottom: 0;
+          margin: 0 auto;
         }
         .hero-btn2 {
           width: 90px;
@@ -883,6 +886,10 @@
           text-align: left;
         }
 
+        .about-me{
+          width: 95%;
+          margin: 0 auto;
+        }
         .about-me-content h2 {
           font-size: 1.9rem;
           margin-top: 0;
@@ -910,11 +917,12 @@
         .statistics {
           display: flex;
           flex-direction: row;
+          align-self: center;
           margin-right: 50px;
         }
 
         .statistics h3 {
-          margin: 5px 27px 5px;
+          margin: 5px 18px;
           text-align: center;
           font-size: 1.1rem;
           padding: 10px;
@@ -928,27 +936,37 @@
           padding: 10px;
           text-align: left;
           margin: 0 24px 0 0;
-          
         }
 
         .project {
           display: flex;
           flex-direction: column;
+          width: 100%;
         }
         .project-image1 img {
-          width: 380px;
+          width: 100%;
           height: 300px;
           margin-bottom: 80px;
         }
 
         .project-image2 img {
-          width: 380px;
+          width: 100%;
           height: 300px;
           margin-bottom: 0;
         }
 
         .card-right {
           margin: 0;
+          width: 95%;
+
+        }
+
+        .card-left{
+          width: 95%;
+        }
+
+        .reach-out {
+          margin-right: 5%;
         }
 
         .reach-out h2 {
@@ -962,7 +980,8 @@
 
         .contact-section {
           padding: 0 5% 0;
-          margin: 0 3% 0;
+          margin: 0 auto;
+          width: 95%;
         }
 
         .right-section {
@@ -989,6 +1008,21 @@
           width: 335px;
           font-size: 0.9rem;
           margin: 0 auto;
+        }
+
+        .contact-section2 button:hover {
+          color: #ffffff;
+          padding: 20px auto;
+          height: 120px;
+          background: rgba(17, 24, 39, 0.4);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+          box-shadow: 8px 0 32px rgba(0, 0, 0, 0.4);
+          text-align: start;
+          text-indent: 10px;
+          cursor: pointer;
         }
       }
     </style>
@@ -1162,9 +1196,9 @@
         </div>
       </div>
       <div class="card-right">
-        <div class="project-image1">
+        <div class="project-image2">
           <img
-            src="https://i.pinimg.com/736x/e0/ff/c5/e0ffc588a25df6fa93acd1680a0113d9.jpg"
+            src="https://i.pinimg.com/736x/c4/27/9c/c4279cd81964268e7097a40db848f5ee.jpg"
             alt="my projects"
             width="520px"
             height="300px"
