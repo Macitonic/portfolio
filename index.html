@@ -362,7 +362,7 @@
       .card-left {
         display: flex;
         justify-content: space-between;
-        margin: 100px 0;
+       
       }
 
       .card-left p {
@@ -371,10 +371,13 @@
         text-align: left;
       }
 
+      .project-image1, .project-image2{
+        margin: 50px 0;
+      }
       .card-right {
         display: flex;
         justify-content: space-between;
-        margin: 100px 0;
+        
       }
 
       .card-right p {
@@ -690,10 +693,16 @@
 
         .hero-content h1 {
           font-size: 3rem;
+          text-align: left;
         }
+
+         .hero-content h2 {
+          text-align: left;
+         }
 
         .hero-content p {
           font-size: 1rem;
+          text-align: left;
         }
 
         .hero-image {
@@ -710,8 +719,11 @@
           margin: 20px auto 0;
         }
 
+        .about-me-content p{
+          text-align: left;
+        }
         .statistics {
-          gap: 60px;
+          gap: 120px;
           flex-wrap: wrap;
           justify-content: center;
         }
@@ -750,6 +762,10 @@
           width: 95%;
         }
 
+        form{
+          width: 360px;
+          max-width: 380px;
+        }
         .contact-section2 {
           flex-direction: column;
           align-items: center;
@@ -757,7 +773,7 @@
         }
 
         .contact-section2 button {
-          width: 95%;
+          max-width: 350px;
           height: auto;
           padding: 20px;
         }
