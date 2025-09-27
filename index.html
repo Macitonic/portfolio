@@ -454,7 +454,6 @@
       .handle-edit {
         width: 35px;
         height: 35px;
-
         background: rgba(17, 24, 39, 0.4);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
@@ -832,38 +831,164 @@
 
       /* Extra small devices (<= 480px) */
       @media (max-width: 480px) {
+        .logo img {
+          width: 100px;
+        }
+
+        body {
+          padding: 0;
+          margin: 0;
+        }
+        .hero {
+          padding: 4.5rem 0 5rem;
+          margin: 0;
+          width: 100%;
+        }
+
+        .hero-btn {
+          display: flex;
+          flex-direction: row;
+          margin: 10px 0;
+        }
+
+        .hero-btn1 {
+          width: 90px;
+        }
+
+        .hero img {
+          width: 380px;
+          height: 300px;
+          border-radius: 20px;
+          margin-bottom: 0;
+        }
+        .hero-btn2 {
+          width: 90px;
+        }
+
+        header {
+          height: 65px;
+        }
         .hero-content h1 {
           font-size: 1.8rem;
+          text-align: left;
         }
 
         .hero-content h2 {
           font-size: 1.2rem;
+          text-align: left;
         }
 
         .hero-content p {
           font-size: 0.9rem;
+          text-align: left;
         }
 
         .about-me-content h2 {
-          font-size: 1.6rem;
+          font-size: 1.9rem;
+          margin-top: 0;
+          padding-top: 0;
+        }
+
+        .about-me-content p {
+          font-size: 0.9rem;
+          line-height: 24px;
+          text-align: left;
+        }
+        .about-me-content button {
+          margin-bottom: 40px;
+          width: 320px;
+        }
+
+        .line {
+          height: 80px;
+        }
+
+        .statistics-section {
+          display: flex;
+        }
+
+        .statistics {
+          display: flex;
+          flex-direction: row;
+          margin-right: 50px;
+        }
+
+        .statistics h3 {
+          margin: 5px 27px 5px;
+          text-align: center;
+          font-size: 1.1rem;
+          padding: 10px;
+        }
+
+        .statistics-report {
+          margin: 5px 0 0 30px;
+        }
+        .statistics-report p {
+          font-size: 0.9rem;
+          padding: 10px;
+          text-align: left;
+          margin: 0 24px 0 0;
+          
+        }
+
+        .project {
+          display: flex;
+          flex-direction: column;
+        }
+        .project-image1 img {
+          width: 380px;
+          height: 300px;
+          margin-bottom: 80px;
+        }
+
+        .project-image2 img {
+          width: 380px;
+          height: 300px;
+          margin-bottom: 0;
+        }
+
+        .card-right {
+          margin: 0;
         }
 
         .reach-out h2 {
           font-size: 2.5rem;
+          margin-top: 0;
         }
 
+        .handle-edit:hover {
+          padding: 0;
+        }
+
+        .contact-section {
+          padding: 0 5% 0;
+          margin: 0 3% 0;
+        }
+
+        .right-section {
+          padding: 0 3% 0;
+        }
+
+        form {
+          width: 98%;
+          max-width: 335px;
+          padding: 0;
+          margin-left: 0 auto;
+        }
         .btn1 input {
-          width: 100%;
+          width: 310px;
+          max-width: 310px;
         }
 
         .btn2 textarea,
         .btn2 button {
-          width: 100%;
+          width: 310px;
         }
 
         .contact-section2 button {
-          width: 100%;
+          width: 335px;
           font-size: 0.9rem;
+          margin: 0 auto;
         }
       }
     </style>
@@ -888,7 +1013,7 @@
             </li>
           </ul>
         </div>
-        <span class="toggle"
+        <!--<span class="toggle"
           ><img
             width="50"
             height="50"
@@ -906,15 +1031,15 @@
               >
             </li>
           </ul>
-        </div>
+        </div>-->
         <!--Navbar response-->
-        <script>
+        <!--<script>
           const toggle = document.querySelector(".toggle");
           const menu = document.getElementById("menu");
           toggle.addEventListener("click", () => {
             menu.classlist.toggle("show");
           });
-        </script>
+        </script>-->
       </nav>
     </header>
 
