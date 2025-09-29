@@ -27,7 +27,7 @@
 
     /*Navbar Section*/
     header {
-      width: 100vw;
+      width: 100%;
       height: 60px;
       background: rgba(3, 11, 19, 0.95);
       backdrop-filter: blur(10px);
@@ -37,65 +37,72 @@
     }
 
     nav {
+      position: relative;
+      
+    }
+
+    .nav-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 auto;
+      padding: 0 15px;
+      height: 60px;
+      position: relative;
     }
 
     .logo img {
+      flex: 0 0 auto;
       width: 115px;
       height: auto;
       object-fit: contain;
     }
 
-    nav ul {
+    #menu ul {
       display: flex;
       gap: 25px;
-      margin-right: 30px;
+      margin: 0;
+      padding: 0;
     }
 
-    nav ul li {
+    #menu ul li {
       list-style-type: none;
     }
 
-    nav ul li a {
+    #menu ul li a {
       text-decoration: none;
       color: #ffffff;
       padding: 10px auto;
       font-size: 1.2rem;
-      transition: all 0.8s ease;
+      transition: color 0.3s ease;
     }
 
-    nav ul li a:hover {
+    #menu ul li a:hover {
       text-decoration: none;
       color: #d9a441;
       padding: 10px auto;
       font-size: 1.2rem;
     }
 
-    nav .contact-btn {
+    .contact-btn {
       background-color: rgb(134, 18, 18);
       color: #ffffff;
       width: 100px;
       height: 35px;
-      margin-bottom: 10px;
-      padding: 10px auto;
       font-weight: 500;
       font-size: 1rem;
-      border: 3px solid transparent;
+      border: 5px;
       border-radius: 5px;
       transition: all 0.3s ease;
       cursor: pointer;
     }
 
-    nav .contact-btn:hover {
+    .contact-btn:hover {
       background-color: rgb(212, 13, 13);
       color: #ffffff;
       width: 100px;
       height: 35.5px;
       font-weight: 525;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       border: 3px solid transparent;
       border-radius: 5px;
       transition: all 0.3s ease;
@@ -103,12 +110,14 @@
     }
 
     .menu {
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
       display: none;
+      margin-left: auto;
+      padding: 10px;
     }
 
-    .show {
-      display: block;
-    }
 
     /*Hero Section*/
     .hero {
@@ -698,16 +707,16 @@
 
       .hero-content h1 {
         font-size: 3rem;
-        text-align: left;
+        text-align: center;
       }
 
       .hero-content h2 {
-        text-align: left;
+        text-align: center;
       }
 
       .hero-content p {
         font-size: 1rem;
-        text-align: left;
+        text-align: center;
       }
 
       .hero-image {
@@ -725,7 +734,7 @@
       }
 
       .about-me-content p {
-        text-align: left;
+        text-align: center;
       }
 
       .statistics {
@@ -788,41 +797,53 @@
 
     /* Mobile (<= 768px) */
     @media (max-width: 768px) {
+      body {
+        width: 100%;
+      }
+
       header {
         height: auto;
         padding: 10px 20px;
+        width: 100%;
       }
 
       nav {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
       }
 
-      nav ul {
+
+      .menu {
+        display: block;
+      }
+
+      #menu ul {
         display: none;
         /* hide desktop menu */
         flex-direction: column;
         width: 100%;
         gap: 15px;
         margin: 10px 0 0;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        width: 200px;
       }
 
-      nav ul.show {
+      #menu.show ul {
         display: flex;
         /* toggle menu when burger is clicked */
       }
 
-      nav .contact-btn {
-        margin: 10px 0;
+      .contact-btn {
+        width: 100%;
+        margin-top: 10px;
       }
 
-      .menu {
-        display: block;
-        font-size: 1.8rem;
-        color: white;
-        cursor: pointer;
-        margin-right: 20px;
-      }
+
 
       .hero {
         width: 100%;
@@ -832,16 +853,16 @@
 
       .hero-content h1 {
         font-size: 2.4rem;
-        text-align: left;
+        text-align: center;
       }
 
       .hero-content h2 {
         font-size: 1.5rem;
-        text-align: left;
+        text-align: center;
       }
 
       .hero-content p {
-        text-align: left;
+        text-align: center;
       }
 
       .hero-btn {
@@ -860,7 +881,7 @@
       }
 
       .about-me-content p {
-        text-align: left;
+        text-align: center;
       }
 
 
@@ -1157,10 +1178,14 @@
   <!--Navbar Section-->
   <header>
     <nav>
-      <div class="logo">
-        <img src="assets/brian-logo.png" alt="brian's logo" />
-      </div>
-      <div class="nav_links">
+      <div class="nav-top">
+        <div class="logo">
+          <img src="assets/brian-logo.png" alt="brian's logo" />
+        </div>
+        <div class="menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div id="menu">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -1170,35 +1195,11 @@
           </li>
         </ul>
       </div>
-      <!--<span class="toggle"
-          ><img
-            width="50"
-            height="50"
-            src="https://img.icons8.com/ios-filled/50/menu--v6.png"
-            alt="menu--v6"
-        /></span>
-        <div class="menu" id="menu">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li>
-              <a href="#contact"
-                ><button class="contact-btn">Contact</button></a
-              >
-            </li>
-          </ul>
-        </div>-->
-      <!--Navbar response-->
-      <!--<script>
-          const toggle = document.querySelector(".toggle");
-          const menu = document.getElementById("menu");
-          toggle.addEventListener("click", () => {
-            menu.classlist.toggle("show");
-          });
-        </script>-->
+      </div>
+      
     </nav>
   </header>
+
 
   <!--Hero Section-->
   <section class="hero" id="home">
@@ -1423,4 +1424,12 @@
   </section>
 </body>
 
+<!--Navbar response-->
+<script>
+  const menuIcon = document.querySelector(".menu");
+  const menu = document.getElementById("menu");
+  menuIcon.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+</script>
 </html>
